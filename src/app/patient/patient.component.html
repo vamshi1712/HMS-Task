@@ -1,0 +1,13 @@
+<p>patient works!</p>
+<button (click)="post()">post</button>
+<div>
+    <ul>
+        <li *ngFor="let patient of patients">
+            {{patient.name}} - {{patient.age}}
+            <button (click)="delete(patient)">Delete</button>
+            <button (click)="update(patient)">Update</button>
+        </li>
+    </ul>
+</div>
+
+
