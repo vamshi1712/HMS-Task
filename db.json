@@ -1,18 +1,18 @@
 {
   "patients": [
     {
-      "name": "vamshi",
-      "age": 11,
-      "sex": "Male",
-      "checkInDate": "",
-      "id": 1
+      "name": "Maddy",
+      "age": 30,
+      "sex": "Undisclosed",
+      "checkInDate": "2022-01-16",
+      "id": 6
     },
     {
-      "name": "vamshi",
-      "age": 22,
+      "name": "Stephen",
+      "age": 60,
       "sex": "Male",
-      "checkInDate": "",
-      "id": 2
+      "checkInDate": "2022-01-06",
+      "id": 7
     }
   ],
   "posts": [

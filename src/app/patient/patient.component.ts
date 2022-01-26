@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { Patient } from '../shared/model/patient';
 import { PatientService } from '../shared/patient.service';
+
 
 @Component({
   selector: 'app-patient',
@@ -23,13 +24,11 @@ export class PatientComponent implements OnInit {
     })
   }
 
-  post() {
-    let patient: Patient = {
-      name: "vamshi", age: 22, sex: "Male", checkInDate: ""
-    }
+  post(patient: Patient) {
     this.patientService.postPatient(patient).subscribe(res => {
-      this.patients.push(res)
-    })
+      this.patients.push(res);
+    });
+
   }
 
   delete(patient: any) {
@@ -39,7 +38,7 @@ export class PatientComponent implements OnInit {
     })
   }
 
-  update(patient: any) {
+  update(patient: any) {  
     let updatedPatient: Patient = {
      age: 11 
     }
