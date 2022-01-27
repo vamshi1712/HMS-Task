@@ -1,7 +1,7 @@
 {
   "patients": [
     {
-      "name": "Maddy",
+      "name": "Madyy",
       "age": 30,
       "sex": "Undisclosed",
       "checkInDate": "2022-01-16",
@@ -9,10 +9,17 @@
     },
     {
       "name": "Stephen",
-      "age": 60,
+      "age": 16,
       "sex": "Male",
-      "checkInDate": "2022-01-06",
+      "checkInDate": "2021-12-29",
       "id": 7
+    },
+    {
+      "name": "Harry",
+      "age": 25,
+      "sex": "Male",
+      "checkInDate": "2022-01-13",
+      "id": 8
     }
   ],
   "posts": [

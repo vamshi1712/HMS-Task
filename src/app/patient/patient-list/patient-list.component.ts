@@ -12,14 +12,22 @@ export class PatientListComponent implements OnInit {
 
   @Output() newPatientData = new EventEmitter<Patient>();
   @Output() deletePatientData = new EventEmitter<Patient>();
+  @Output() editPatientData = new EventEmitter<Patient>();
 
   deletablePatient: Patient;
+  editablePatient: Patient;
   addPatientModal: Boolean = false;
+  editPatientModal: Boolean = false;
   deletePatientModal: Boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  editPatient(patient: Patient) {
+    this.editablePatient = patient;
+    this.showEditPatientModal()
   }
 
   deletePatient(patient: Patient) {
@@ -32,9 +40,22 @@ export class PatientListComponent implements OnInit {
     this.closeDeletePatientModal('')
   }
 
+  editPatientEmit(patient: Patient) {
+    this.editPatientData.emit(patient)
+    this.closeEditPatientModal('')
+  }
+
   postPatientData(patient: Patient) {
     this.newPatientData.emit(patient)
     this.closeAddPatientModal('')
+  }
+
+  showEditPatientModal() {
+    this.editPatientModal = true;
+  }
+
+  closeEditPatientModal(e: any) {
+    this.editPatientModal = false;
   }
 
   showDeletePatientModal() {

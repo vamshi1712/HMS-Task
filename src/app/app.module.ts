@@ -10,6 +10,7 @@ import { PatientListComponent } from './patient/patient-list/patient-list.compon
 import { AddPatientComponent } from './patient/add-patient/add-patient.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DeletePatientComponent } from './patient/delete-patient/delete-patient.component';
+import { EditPatientComponent } from './patient/edit-patient/edit-patient.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DeletePatientComponent } from './patient/delete-patient/delete-patient.
     PatientComponent,
     PatientListComponent,
     AddPatientComponent,
-    DeletePatientComponent
+    DeletePatientComponent,
+    EditPatientComponent
   ],
   imports: [
     BrowserModule,

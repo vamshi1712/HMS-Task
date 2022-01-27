@@ -9,9 +9,11 @@ import { Patient } from 'src/app/shared/model/patient';
 })
 export class AddPatientComponent implements OnInit {
 
-  @Output() closeAddPatientModal = new EventEmitter();
 
-  @Output() postPatientData = new EventEmitter<Patient>()
+  @Output() closeAddPatientModal = new EventEmitter();
+  @Output() postPatientData = new EventEmitter<Patient>();
+
+  submitted: Boolean = false;
 
   addPatientForm = new FormGroup({
     name: new FormControl(null),
@@ -25,8 +27,15 @@ export class AddPatientComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  get getControls() {
+    return this.addPatientForm.controls;
+  }
+
   onSubmit() {
-    this.postPatientData.emit(this.addPatientForm.value)
+    this.submitted = true;
+    if(this.addPatientForm.valid){
+      this.postPatientData.emit(this.addPatientForm.value)
+    }
   }
 
 }

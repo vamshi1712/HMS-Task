@@ -33,17 +33,12 @@ export class PatientComponent implements OnInit {
 
   delete(patient: any) {
     this.patientService.deletePatient(patient.id).subscribe(res => {
-      console.log(res);
       this.get();
     })
   }
 
   update(patient: any) {  
-    let updatedPatient: Patient = {
-     age: 11 
-    }
-    this.patientService.updatePatient(patient.id, updatedPatient).subscribe(res => {
-      console.log(res);
+    this.patientService.updatePatient(patient.id, patient).subscribe(res => {
       this.get()
     })
   }

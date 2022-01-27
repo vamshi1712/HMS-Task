@@ -8,19 +8,18 @@
                     <div class="max-w-md w-full space-y-8">
                     <div>
                         <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                        Add Patient
+                        Edit Patient
                         </h2>
                     </div>
-                    <form class="mt-8 space-y-6" [formGroup]="addPatientForm" (ngSubmit) = "onSubmit()">
+                    <form class="mt-8 space-y-6" [formGroup]="editPatientForm" (ngSubmit) = "onSubmit()">
                         <div class="grid grid-cols-2 gap-2">
                             <div>
                                 <div class="rounded-md shadow-sm -space-y-px">
                                     <div>
-                                        <label for="name" class="">Name<span class="text-red-900">*</span></label>
+                                        <label for="name" class="">Name <span class="text-red-900">*</span></label>
                                         <input id="name" name="email" type="text" formControlName="name" 
                                         [ngClass]="getControls['name'].invalid && (getControls['name'].dirty || getControls['name'].touched || submitted) ? 'error' : '' "
-                                        required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
-                                        placeholder="Name">
+                                        required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" placeholder="Name">
                                     </div>
                                 </div>
                             </div>
@@ -75,7 +74,7 @@
                         </div>
                         
                         <div class="float-right">
-                            <button type="button" (click)="closeAddPatientModal.emit()"
+                            <button type="button" (click)="closeEditPatientModal.emit()"
                             class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
                             Cancel
                             </button>

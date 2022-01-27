@@ -10,6 +10,7 @@
     <main>
         <app-patient-list 
         [patients]="patients"
+        (editPatientData) = "update($event)"
         (deletePatientData) = "delete($event)"
         (newPatientData) = "post($event)"></app-patient-list>
     </main>
